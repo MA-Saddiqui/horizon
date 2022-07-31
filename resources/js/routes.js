@@ -6,6 +6,11 @@ export default [
         name: 'dashboard',
         component: require('./screens/dashboard').default,
     },
+    {
+        path: '/upload-zip',
+        name: 'upload-zip',
+        component: require('./screens/upload/upload').default,
+    },
 
     {
         path: '/monitoring',

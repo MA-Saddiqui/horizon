@@ -24,12 +24,8 @@
 
     <div class="container mb-5">
         <div class="d-flex align-items-center py-4 header">
-            <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-                <path class="fill-primary" d="M5.26176342 26.4094389C2.04147988 23.6582233 0 19.5675182 0 15c0-4.1421356 1.67893219-7.89213562 4.39339828-10.60660172C7.10786438 1.67893219 10.8578644 0 15 0c8.2842712 0 15 6.71572875 15 15 0 8.2842712-6.7157288 15-15 15-3.716753 0-7.11777662-1.3517984-9.73823658-3.5905611zM4.03811305 15.9222506C5.70084247 14.4569342 6.87195416 12.5 10 12.5c5 0 5 5 10 5 3.1280454 0 4.2991572-1.9569336 5.961887-3.4222502C25.4934253 8.43417206 20.7645408 4 15 4 8.92486775 4 4 8.92486775 4 15c0 .3105915.01287248.6181765.03811305.9222506z"/>
-            </svg>
+            <img src="{{asset('pdf/img/logo.png')}}" style="width: 200px" class="logo" alt="">
 
-            <h4 class="mb-0 ml-2">
-                <strong>Laravel</strong> Horizon{{ config('app.name') ? ' - ' . config('app.name') : '' }}</h4>
 
             <button class="btn btn-outline-primary ml-auto" :class="{active: autoLoadsNewEntries}" v-on:click.prevent="autoLoadNewEntries" title="Auto Load Entries">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="icon fill-primary">
@@ -47,6 +43,13 @@
                                 <path d="M0 3c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3zm2 2v12h16V5H2zm8 3l4 5H6l4-5z"></path>
                             </svg>
                             <span>Dashboard</span>
+                        </router-link>
+
+                    </li>
+                    <li class="nav-item">
+                        <router-link active-class="active" to="/upload-zip" class="nav-link d-flex align-items-center pt-0">
+                            <svg id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="XMLID_1271_"><rect height="19.1" id="XMLID_446_" width="227.1" x="120.3" y="158.6"/><rect height="19.1" id="XMLID_445_" width="227.1" x="120.3" y="189.6"/><rect height="19.1" id="XMLID_444_" width="227.1" x="120.3" y="220.7"/><rect height="19.1" id="XMLID_443_" width="227.1" x="120.3" y="251.7"/><rect height="19.1" id="XMLID_442_" width="176.5" x="120.3" y="282.7"/><path d="M456.1,75.1L397.6,7.3c-1.8-1.8-4.9-1.8-6.7,0l-58.5,67.8c-2.6,2.6-0.6,6.7,3.3,6.7h27.4V135h62.1V81.8   h27.4C456.7,81.8,458.7,77.7,456.1,75.1z" id="XMLID_441_"/><rect height="24.2" id="XMLID_440_" width="62.1" x="363.2" y="144.6"/><path d="M363.2,187.3c0,2.2,2,4,4.5,4h53.1c2.5,0,4.5-1.8,4.5-4v-8.9h-62.1V187.3z" id="XMLID_439_"/><path d="M386.7,464.2c0,15.8-12.8,28.6-28.6,28.6H109.5c-15.8,0-28.6-12.8-28.6-28.6v-8.8H67.7V469   c0,20.5,16.6,37,37,37h258.1c20.5,0,37-16.6,37-37V200.4h-13.2V464.2z" id="XMLID_438_"/><path d="M80.9,110.3c0-15.8,12.8-28.6,28.6-28.6h213.2c-1.4-4.4-0.3-9.3,3-12.7l0.4-0.4H104.8   c-20.5,0-37,16.6-37,37V333h13.2V110.3z" id="XMLID_437_"/><path d="M241.6,372.3h-13v21.2h13c3.7,0,6.5-1,8.4-3c1.9-2,2.8-4.5,2.8-7.5s-0.9-5.6-2.8-7.6   C248.1,373.3,245.3,372.3,241.6,372.3z" id="XMLID_436_"/><path d="M345.4,394.3L345.4,394.3c0-28.7-23.3-52.1-52.1-52.1H54.7v104.1h238.7   C322.1,446.3,345.4,423,345.4,394.3z M179.6,424.3h-42.2V418l29.3-45.7h-29.1v-8h40.9v6l-29.4,46h30.5V424.3z M202.7,424.3h-10v-60   h10V424.3z M257.2,396.4c-3.7,3.4-8.9,5.1-15.6,5.1h-13v22.7h-10v-60h23c6.6,0,11.8,1.7,15.6,5.1c3.8,3.4,5.6,7.9,5.6,13.5   C262.8,388.5,260.9,393,257.2,396.4z" id="XMLID_1272_"/></g></svg>
+                            <span>Upload Zip</span>
                         </router-link>
                     </li>
                     <li class="nav-item">

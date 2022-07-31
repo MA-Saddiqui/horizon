@@ -6,6 +6,10 @@ Route::prefix('api')->group(function () {
     // Dashboard Routes...
     Route::get('/stats', 'DashboardStatsController@index')->name('horizon.stats.index');
 
+    // Upload Routes...
+
+    Route::post('/upload', 'UploadsController@upload')->name('horizon.upload');
+
     // Workload Routes...
     Route::get('/workload', 'WorkloadController@index')->name('horizon.workload.index');
 

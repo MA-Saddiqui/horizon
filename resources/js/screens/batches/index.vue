@@ -183,7 +183,12 @@
                         </small>
                     </td>
                     <td>{{batch.totalJobs}}</td>
-                    <td>{{batch.progress}}%</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" :style="{width: batch.progress + '%'}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{{batch.progress}}%</div>
+                        </div>
+
+                    </td>
 
                     <td class="text-right table-fit">
                         {{ formatDateIso(batch.createdAt).format('YYYY-MM-DD HH:mm:ss') }}
