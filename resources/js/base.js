@@ -1,3 +1,4 @@
+import axios from 'axios';
 import moment from 'moment-timezone';
 
 export default {
@@ -44,6 +45,18 @@ export default {
                 this.autoLoadsNewEntries = false;
                 localStorage.autoLoadsNewEntries = 0;
             }
+        },
+        /**
+         * Delete All previous Records from DB
+         */
+        deleteAllPreviousRecords() {
+            // send request to backend and delete all previous records
+            axios.post(Horizon.basePath + '/api/uploads/delete-all-previous-records')
+                    .then(response => {
+                        this.queues = response.data;
+
+                        this.ready = true;
+                    });
         },
 
         /**

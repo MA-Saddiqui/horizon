@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('api')->group(function () {
@@ -9,6 +10,11 @@ Route::prefix('api')->group(function () {
     // Upload Routes...
 
     Route::post('/upload', 'UploadsController@upload')->name('horizon.upload');
+
+    //delete all previous batches
+    Route::post('/uploads/delete-all-previous-records',function(){
+        Artisan::call('PruneData');
+    })->name('horizon.delete-all-previous-records');
 
     // Workload Routes...
     Route::get('/workload', 'WorkloadController@index')->name('horizon.workload.index');
