@@ -4,6 +4,7 @@ namespace Laravel\Horizon\Http\Controllers;
 
 use App\Jobs\ExtractZip;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 
 class UploadsController extends Controller
 {
@@ -21,5 +22,10 @@ class UploadsController extends Controller
         ];
 
 
+    }
+
+    public function deleteAllPreviousRecords()
+    {
+        Artisan::call('horizon:clear');
     }
 }

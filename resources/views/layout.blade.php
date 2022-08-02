@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="shortcut icon" href="{{ asset('/vendor/horizon/img/favicon.png') }}">
+    <link rel="shortcut icon" href="{{asset('pdf/img/logo.png')}}">
 
-    <title>Horizon{{ config('app.name') ? ' - ' . config('app.name') : '' }}</title>
+    <title>Bandhan Bank PDF Tool</title>
 
     <!-- Style sheets-->
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
@@ -68,7 +68,7 @@
                             <span>Upload Zip</span>
                         </router-link>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <router-link active-class="active" to="/monitoring" class="nav-link d-flex align-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                                 <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
@@ -83,7 +83,7 @@
                             </svg>
                             <span>Metrics</span>
                         </router-link>
-                    </li>
+                    </li> --}}
                     <li class="nav-item">
                         <router-link active-class="active" to="/batches" class="nav-link d-flex align-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
